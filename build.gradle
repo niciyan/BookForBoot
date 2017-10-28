@@ -25,6 +25,12 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile("com.h2database:h2")
+	compileOnly 'org.projectlombok:lombok'
+	// Use MySQL Connector-J
+	compile 'mysql:mysql-connector-java'
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	compileOnly 'org.projectlombok:lombok'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
