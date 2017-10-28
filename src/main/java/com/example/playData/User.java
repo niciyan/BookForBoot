@@ -1,6 +1,6 @@
 package com.example.playData;
 
-import com.example.playData.Post;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,6 +15,7 @@ public class User {
     private Long id;
     private String name;
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @JsonIgnore
     private List<Post> posts;
 
     public User() {}
